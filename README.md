@@ -17,6 +17,7 @@ The `ServoControl` class provides a minimalistic and reliable way to control ser
 - **Lightweight and Efficient:**
   - Minimal overhead with only essential functions for attaching and controlling the servo.
   - Optimized for performance and simplicity.
+  - The servo is free when not in use, which is perfect for mobile application
 
 - **Easy Integration:**
   - Designed to be easily integrated into any ESP32 project.
