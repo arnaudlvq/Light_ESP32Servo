@@ -28,44 +28,28 @@ The `ServoControl` class provides a minimalistic and reliable way to control ser
 // Include the new ServoControl header
 #include "ServoControl.h"
 
-// Define the servo control object
-// Specify the pin to which the servo is connected (PIN_SG90)
+// Define the servo control object & specify the pin to which the servo is connected (PIN_SG90)
 ServoControl sg90(PIN_SG90);
 
-// Function to open the box
-void openBox() {
-    Serial.println("Opening the box...");
-    sg90.write(0);  // Move the servo to 0 degrees (OPEN position)
-    delay(1000);    // Wait for the servo to reach the position
-    isOpened = true;
-    Serial.println("Box opened.");
+
+void openServo() {
+    sg90.write(0);  // Move the servo to 0 degrees (example)
+    delay(1000);
 }
 
-// Function to close the box
-void closeBox() {
-    Serial.println("Closing the box...");
-    sg90.write(90);  // Move the servo to 90 degrees (CLOSE position)
-    delay(1000);     // Wait for the servo to reach the position
-    isOpened = false;
-    Serial.println("Box closed.");
+void closeServo() {
+    sg90.write(90);  // Move the servo to 90 degrees (example)
+    delay(1000);
 }
 
-// In the setup function, initialize the servo and start with the box closed
+// In the setup function, initialize the servo
 void setup() {
     Serial.begin(115200);
     
     // Attach the servo to the specified pin
     sg90.attach();
-    
-    // Other setup code...
-
-    // Ensure the box starts in the closed position
-    closeBox();
-}
-
-// The loop function remains unchanged and continues to manage the main logic of your project
-void loop() {
-    // Your existing loop code...
+    delay(2000);
+    ...
 }
 
 ```
