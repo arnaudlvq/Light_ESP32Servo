@@ -1,12 +1,8 @@
-# Light_ESP32Servo (ServoControl Class)
-
-### Simple and Elegant Servo Motor Control for ESP32
-
----
+# Light_ESP32Servo (ServoControl Class) : Simple and Elegant Servo Motor Control for ESP32
 
 ## Introduction
 
-The `ServoControl` class provides a minimalistic and reliable way to control servo motors on the ESP32 without the need for any external libraries. By directly managing PWM signals, this implementation ensures smooth and consistent servo operation, perfect for applications where stability and simplicity are key.
+The `ServoControl` class provides a minimalistic and reliable way to control 180-degree servo motors on the ESP32 without the need for any external libraries. By directly managing PWM signals, this implementation ensures smooth and consistent servo operation, perfect for applications where stability and simplicity are key.
 
 ## Features
 
@@ -17,11 +13,20 @@ The `ServoControl` class provides a minimalistic and reliable way to control ser
 - **Lightweight and Efficient:**
   - Minimal overhead with only essential functions for attaching and controlling the servo.
   - Optimized for performance and simplicity.
-  - The servo is free when not in use, which is perfect for mobile application
+  - The servo is free when not in use, which is perfect for mobile applications.
 
 - **Easy Integration:**
   - Designed to be easily integrated into any ESP32 project.
   - Simply include the `ServoControl.h` file and create an instance of the `ServoControl` class.
+
+- **Compatibility:**
+  - Specifically tested on ESP32-D and ESP32-E variants.
+  - Works exclusively with 180-degree servo motors.
+  - Does not support 3.3V operation; requires appropriate voltage levels.
+
+- **Arduino Compatibility:**
+  - Utilizes `Arduino.h` for seamless integration into Arduino-based ESP32 projects.
+
 
 ## Example
 
